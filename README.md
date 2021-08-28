@@ -29,6 +29,6 @@ The next steps for this applications is to have it record events happening on a 
 
 ## Tl;DR
 
-*While you may be able to code everything from scratch, using thrid party libraries is a very effective way to build powerful code without having to make everything from scratch.  
+*Coding everything from scratch, using third party libraries is a very effective way to build powerful code without having to make everything from scratch.  
 
 *Don't forget to import your JS scripts in the HTML! 
