@@ -1,7 +1,86 @@
+// Hides the Save Alert
+document.getElementById("gotToGetThat").style.display = "none";
+
+function disappear() {
+    document.getElementById("gotToGetThat").style.display = "none";
+}
+
+function savedAlert() {
+    document.getElementById("gotToGetThat").style.display = "block";
+    setTimeout(disappear, 5000);
+}
+
 // Pulls the current week/month/day
 var currentDay = document.getElementById("currentDay");
 currentDay.textContent = moment().format('dddd, MMMM Do');
 
+// Render Local Storage
+var loadHour9 = localStorage.getItem('Hour 9') || [];
+textBox9.append(loadHour9);
+var loadHour10 = localStorage.getItem('Hour 10') || [];
+textBox10.append(loadHour10);
+var loadHour11 = localStorage.getItem('Hour 11') || [];
+textBox11.append(loadHour11);
+var loadHour12 = localStorage.getItem('Hour 12') || [];
+textBox12.append(loadHour12);
+var loadHour1 = localStorage.getItem('Hour 1') || [];
+textBox1.append(loadHour1);
+var loadHour2 = localStorage.getItem('Hour 2') || [];
+textBox2.append(loadHour2);
+var loadHour3 = localStorage.getItem('Hour 3') || [];
+textBox3.append(loadHour3);
+var loadHour4 = localStorage.getItem('Hour 4') || [];
+textBox4.append(loadHour4);
+var loadHour5 = localStorage.getItem('Hour 5') || [];
+textBox5.append(loadHour5);
+
+// Save to Local Storage 
+$('#saveBTN9').on('click', function () {
+    localStorage.setItem('Hour 9', textBox9.value);
+    savedAlert();
+});
+
+$('#saveBTN10').on('click', function () {
+    localStorage.setItem('Hour 10', textBox10.value);
+    savedAlert();
+});
+
+$('#saveBTN11').on('click', function () {
+    localStorage.setItem('Hour 11', textBox11.value);
+    savedAlert();
+});
+
+$('#saveBTN12').on('click', function () {
+    localStorage.setItem('Hour 12', textBox12.value);
+    savedAlert();
+});
+
+$('#saveBTN1').on('click', function () {
+    localStorage.setItem('Hour 1', textBox1.value);
+    savedAlert();
+});
+
+$('#saveBTN2').on('click', function () {
+    localStorage.setItem('Hour 2', textBox2.value);
+    savedAlert();
+});
+
+$('#saveBTN3').on('click', function () {
+    localStorage.setItem('Hour 3', textBox3.value);
+    savedAlert();
+});
+
+$('#saveBTN4').on('click', function () {
+    localStorage.setItem('Hour 4', textBox4.value);
+    savedAlert();
+});
+
+$('#saveBTN5').on('click', function () {
+    localStorage.setItem('Hour 5', textBox5.value);
+    savedAlert();
+});
+
+// Automated background text area color start
 var textBox = document.getElementById("textBox9");
 var textBox = document.getElementById("textBox10");
 var textBox = document.getElementById("textBox11");
@@ -23,10 +102,8 @@ var twoClock = moment('02:00 pm', "HH:mm a");
 var threeClock = moment('03:00 pm', "HH:mm a");
 var fourClock = moment('04:00 pm', "HH:mm a");
 var fiveClock = moment('05:00 pm', "HH:mm a");
-var sixClock = moment('05:00 pm', "HH:mm a");
+var sixClock = moment('06:00 pm', "HH:mm a");
 var midnight = moment('12:00 am', "HH:mm a");
-var eleven = moment('11:00 pm', "HH:mm a")
-
 
 function nineAM() {
     if (currentTime.isBetween(nineClock, tenClock)) {
@@ -145,7 +222,7 @@ function fivePM() {
     }
 }
 
-function wow() {
+function bewm() {
     nineAM();
     tenAM();
     elevenAM();
@@ -157,27 +234,5 @@ function wow() {
     fivePM();
 };
 
-wow();
-
-
-
-
-
-
-
-
-
-
-
-// past
-// if between this set time and this set time / then we want it to turn green
-
-// future
-    // if between (1 hour before 9) than turn it into a future item background.
-
-// past
-    // the past will be greyed out and user will be unable to make any selections
-
-
-    // SIDE NOTES 
-    // WE NEED TO TURN THE CLASS BADGES INTO THE PAST/PRESENT/FUTURE FOR THE CSS SHEET
+bewm();
+// Automated background text color end
