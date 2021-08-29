@@ -2,9 +2,9 @@
 
 The goal of this project was take the provided Starter Code  (HTML and CSS) and implement Third-Party APIs into the application.  
 
-Here's a link the the application: [link](https://carpetonberry.github.io/3rd-Party-API_Work_Day_Scheduler/)
+Here's a link to the application: [link](https://carpetonberry.github.io/3rd-Party-API_Work_Day_Scheduler/)
 
-Here's a a link to the github repository: [link](https://github.com/CarpeTonberry/3rd-Party-API_Work_Day_Scheduler)
+Here's a link to the github repository: [link](https://github.com/CarpeTonberry/3rd-Party-API_Work_Day_Scheduler)
 
 ## Layout of Application 
 
